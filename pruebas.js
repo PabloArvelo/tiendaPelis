@@ -9,7 +9,29 @@
 // "cantDigitos": 5
 // }
 
-num1 = 3;
-num2 = 2;
-let array = [num1, num2, num1*num2] ;
-console.log(array);
+
+
+let Pablo = {
+    "instrumento": "guitarra",
+    "habilidad": "componer"
+}
+
+let Claudia = {
+    "instrumento": "canto",
+    "habilidad": "dirigir"
+}
+
+let Juampi = {
+    "instrumento": "canto",
+    "habilidad": "trap"
+}
+let equipo = [Pablo, Claudia];
+
+
+equipo.push(Juampi)
+
+
+let item = equipo[2];
+item.habilidad = "predicar";
+equipo.splice(2,1,item);
+console.log(equipo);
