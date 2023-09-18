@@ -1,0 +1,16 @@
+.carritoItemContainer{
+    display: flex;
+    
+    padding: 10px;
+    align-items: center;
+}
+
+.controlCantidad{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+}
+.itemElement{    
+    margin: 0px 10px 0px 0px;
+}
