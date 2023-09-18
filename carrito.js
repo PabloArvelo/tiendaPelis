@@ -23,8 +23,15 @@ function show() {
 
                 <div class="carritoItemContainer">
 
-                    <img  class="carritoItemImg itemElement" src="https://image.tmdb.org/t/p/w200/${carritoView[i]._im}" alt="">
+                <div class="litImage">
+                <img  class="carritoItemImg" src="https://image.tmdb.org/t/p/w200/${carritoView[i]._im}" alt="">                
+                </div>
+
+                    
+                    <div class="anchoTitulo">
                     <p class="carritoItemTitulo itemElement">${carritoView[i]._tit}</p>
+                    </div>
+
                     <p class="carritoItemPrecio itemElement"> $ ${carritoView[i]._pre}</p>  
 
                     
@@ -41,7 +48,9 @@ function show() {
 
                 </div>                
              
-             </div>                
+             </div>    
+             __________________________________________________________________________________
+
             
      `;
 
