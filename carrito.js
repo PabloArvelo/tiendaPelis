@@ -44,7 +44,9 @@ function show() {
 
                     <p class="carritoItemPrecio itemElement">$${carritoView[i]._subT} </p>                 
                 
-                    <button class="itemElement" name="${i}" class="carritoItemBorrar" onclick="borrarProducto(this.name)">quitar</button>
+                    <button class="btnDelete" name="${i}" class="carritoItemBorrar" onclick="borrarProducto(this.name)">
+                    <img class="tacho" src="img/cesto.png"></img>
+                    </button>
 
                 </div>                
              
@@ -59,6 +61,7 @@ function show() {
 
 }
 let cant = 1;
+
 
 function incrementaQItem(x) {
 
