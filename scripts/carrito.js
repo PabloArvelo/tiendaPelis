@@ -1,14 +1,17 @@
 'use strict';
 
 let divCarrito = document.querySelector("#carrito");
+let total = document.querySelector("#totalPrecio");
 let carritoView = JSON.parse(localStorage.getItem("pedido")) || [];
 let carritoShow = "";
+// let carritoTotalCompra = "";
 let sumaQ = "";
 let restaQ = "";
 let i = 0;
 let cantxItems = "";
 let subTotItems = 0;
 let precio = 0;
+let compraTotal = 0;
 
 show();  // llamo para ejecutarla desde entrada
 // calcSubItems();
@@ -25,9 +28,7 @@ function show() {
 
                 <div class="litImage">
                 <img  class="carritoItemImg" src="https://image.tmdb.org/t/p/w200/${carritoView[i]._im}" alt="">                
-                </div>
-
-                    
+                </div>                    
                     <div class="anchoTitulo">
                     <p class="carritoItemTitulo itemElement">${carritoView[i]._tit}</p>
                     </div>
@@ -51,13 +52,18 @@ function show() {
                 </div>                
              
              </div>    
-             __________________________________________________________________________________
-
-            
-     `;
+             </br>                
+     `;        
 
         divCarrito.innerHTML = carritoShow;
     }
+
+    for (let j = 0; j < carritoView.length; j++) {
+        compraTotal = compraTotal+carritoView[j]._subT;
+    }       
+
+    total.innerHTML = "$ "+compraTotal;  
+    compraTotal = 0;
 
 }
 let cant = 1;
@@ -117,7 +123,5 @@ function borrarProducto(x) {
 const saveNewLocalSorage = () => {
     localStorage.setItem('pedido', JSON.stringify(carritoView));
 }
-
-
 
 console.log(carritoView);

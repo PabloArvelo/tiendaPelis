@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="styles/carrito.css">
+    <link rel="stylesheet" href="styles/index2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 
     <title>Carrito de compras</title>
 </head>
+
 <body>
+    <header>
+        <h1>PelisOnLine</h1>
+    </header>
+    <div id="contieneCarrito">
 
-    <h3>CARRITO DE COMPRAS</h3>
-    <button onclick="home()">seguir comprando</button>
+        <div id="textos">
+            <div>
+                <h3>CARRITO DE COMPRAS</h3>
+                <button id="btnSigueComprando" class="btn btn-success" onclick="home()">seguir comprando</button>
+            </div>
+            <div id="prTotal">
+                <h2 id="totalTexto">TOTAL a pagar</h2>
+                <h2 id="totalPrecio">$1500</h2>
+            </div>
+        </div>
 
 
 
-    <div id="carrito">
-        <img src="" alt="">
+
+        <div id="carrito">
+            
+
+        </div>
 
     </div>
 
-    
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <script src="carrito.js"></script>
+    <script src="scripts/carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
 </body>
-</html>
 
+</html>
